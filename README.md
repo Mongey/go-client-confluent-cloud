@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	client := confluentcloud.NewClient("<EMAIL>", "<PASSWORD>")
+	client := confluentcloud.NewClient("<EMAIL>", "<PASSWORD>", false)
 	err := client.Login()
 	if err != nil {
 		log.Print(err)
