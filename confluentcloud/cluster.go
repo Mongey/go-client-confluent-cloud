@@ -173,8 +173,6 @@ func (c *Client) GetCluster(id, account_id string) (*Cluster, error) {
 
 	u := c.BaseURL.ResolveReference(rel)
 
-	fmt.Println(rel.String())
-
 	response, err := c.NewRequest().
 		SetResult(&ClusterResponse{}).
 		SetQueryParam("account_id", account_id).
